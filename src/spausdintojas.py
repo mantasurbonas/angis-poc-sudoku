@@ -10,7 +10,7 @@ klasė Spausdintojas:
         imk eilnr iš intervalo (0, 9):
             imk stulpnr iš intervalo (0, 9):
                 l = lenta.langeliai[eilnr, stulpnr]
-                jeigu l.yraSprendimas():
+                jeigu l.arIšspręstas():
                     res += "  " + str(l.sprendimas) + "  "
                 kituatveju:
                     res += " (" +str(len(l.kandidatai)) +") "

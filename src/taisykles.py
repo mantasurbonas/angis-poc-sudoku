@@ -152,7 +152,7 @@ klasė Sprendėjas:
     tai spręskRegioną(šis, regionas):
         regionas.peržiūrėkLangelius()
         
-        jei regionas.yraIšspręstas():
+        jei regionas.arIšspręstas():
             grąžink Netaikyta
 
         imk taisyklė iš šis._taisyklės:

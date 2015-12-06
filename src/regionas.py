@@ -6,10 +6,10 @@ klasė Regionas:
     tai __init__(šis, langeliai):
         šis._langeliai = langeliai[:]
                 
-        šis._žinomosReikšmės = {l.sprendimas imk l iš langeliai jei l.yraSprendimas() }
+        šis._žinomosReikšmės = {l.sprendimas imk l iš langeliai jei l.arIšspręstas() }
         šis._trūkstamosReikšmės = šis._žinomosReikšmės ^ Langelis.GALIMOS_REIKŠMĖS
         
-        šis._tuštiLangeliai = [l imk l iš langeliai jei l.yraSprendimas()==Netiesa]
+        šis._tuštiLangeliai = [l imk l iš langeliai jei l.arIšspręstas()==Netiesa]
         
                 
     @property
@@ -27,7 +27,7 @@ klasė Regionas:
         grąžink frozenset(šis._tuštiLangeliai)
         
         
-    tai yraIšspręstas(šis):
+    tai arIšspręstas(šis):
         grąžink len(šis._tuštiLangeliai) == 0    
     
     
@@ -46,7 +46,7 @@ klasė Regionas:
         rezultatas = Nepakeista
         
         imk l iš šis._tuštiLangeliai[:] :
-            jei l.yraSprendimas():
+            jei l.arIšspręstas():
                 šis._tuštiLangeliai.remove(l)
                 šis._trūkstamosReikšmės.remove(l.sprendimas)
                 šis._žinomosReikšmės.add(l.sprendimas)

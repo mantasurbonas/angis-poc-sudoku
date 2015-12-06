@@ -27,11 +27,11 @@ klasė Langelis:
         šis._ribojimai  = aibė()
         šis._kandidatai = aibė()        
         
-        jeigu šis.yraSprendimas() == Netiesa:
+        jeigu šis.arIšspręstas() == Netiesa:
             šis._kandidatai |= šis.GALIMOS_REIKŠMĖS
             
             
-    tai yraSprendimas(šis):
+    tai arIšspręstas(šis):
         grąžink šis._sprendimas != 0
         
         
@@ -46,7 +46,7 @@ klasė Langelis:
         
         
     tai pridėkRibojimą(šis, sk):
-        jei šis.yraSprendimas():
+        jei šis.arIšspręstas():
             grąžink Nepakeista
             
         jei sk iš šis._ribojimai:
